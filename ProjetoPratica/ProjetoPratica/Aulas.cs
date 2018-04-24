@@ -31,10 +31,10 @@ namespace ProjetoPratica
             String[] ret = new String[ds.Tables[0].Rows.Count];
 
             if(ds.Tables[0].Rows.Count != 0)
-                for (int i = 0; i <= ds.Tables[0].Rows.Count; i++)
+                for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
                 {
                     dr = ds.Tables[0].Rows[i];
-                    ret[i] = dr.ItemArray[i].ToString();
+                    ret[i] = dr.ItemArray[0].ToString();
                 }
 
             return ret;

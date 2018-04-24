@@ -130,16 +130,36 @@ namespace ProjetoPratica
             groupBox2.Visible = false;
             string[] aulas = Aulas.GetAulas("Portugues");
 
+            Label lblNome = new Label();
+            lblNome.Text = "Aulas de Portugues";
+            lblNome.Width = 250;
+            lblNome.Top = 10;
+            lblNome.Left = 420;
+            this.Controls.Add(lblNome);
 
+            int top = 80;
             Button[] buttons = new Button[aulas.Length];
             for(int i = 0; i < aulas.Length; i++)
             {
+                
                 buttons[i] = new Button();
                 buttons[i].Text = aulas[i];
-                buttons[i].Left = 150 + 30 * i;
+
+                buttons[i].Top = top;
+                if ((i+1) % 3 == 0)
+                {
+                    top += 70;
+                    buttons[i].Left = 590;
+                }
+                else
+                    if ((i+1) % 3 == 1)
+                        buttons[i].Left = 310;
+                    else
+                        buttons[i].Left = 450;
+
                 buttons[i].Width = 120;
                 buttons[i].Height = 50;
-                this.components.Add(buttons[i]);
+                this.Controls.Add(buttons[i]);
             }
         }
     }
