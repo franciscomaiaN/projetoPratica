@@ -130,9 +130,13 @@ namespace ProjetoPratica
             groupBox2.Visible = false;
             string[] aulas = Aulas.GetAulas("Portugues");
 
-            foreach(string titulo in aulas)
-            {
 
+            Button[] buttons = new Button[aulas.Length];
+            for(int i = 0; i < aulas.Length; i++)
+            {
+                buttons[i] = new Button();
+                buttons[i].
+                this.components.Add();
             }
         }
     }

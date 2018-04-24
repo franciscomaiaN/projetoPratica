@@ -31,3 +31,14 @@ Z:\PPII\ProjetoPratica\ProjetoPratica\obj\Debug\ProjetoPratica.pdb
 Z:\PPII\ProjetoPratica\ProjetoPratica\bin\Debug\ProjetoPratica.exe.config
 Z:\PPII\ProjetoPratica\ProjetoPratica\bin\Debug\ProjetoPratica.exe
 Z:\PPII\ProjetoPratica\ProjetoPratica\bin\Debug\ProjetoPratica.pdb
+Z:\Pratica2\projetoPratica\ProjetoPratica\ProjetoPratica\bin\Debug\ProjetoPratica.exe.config
+Z:\Pratica2\projetoPratica\ProjetoPratica\ProjetoPratica\bin\Debug\ProjetoPratica.exe
+Z:\Pratica2\projetoPratica\ProjetoPratica\ProjetoPratica\bin\Debug\ProjetoPratica.pdb
+Z:\Pratica2\projetoPratica\ProjetoPratica\ProjetoPratica\obj\Debug\ProjetoPratica.csprojResolveAssemblyReference.cache
+Z:\Pratica2\projetoPratica\ProjetoPratica\ProjetoPratica\obj\Debug\ProjetoPratica.FrmPrincipal.resources
+Z:\Pratica2\projetoPratica\ProjetoPratica\ProjetoPratica\obj\Debug\ProjetoPratica.Login.resources
+Z:\Pratica2\projetoPratica\ProjetoPratica\ProjetoPratica\obj\Debug\ProjetoPratica.Properties.Resources.resources
+Z:\Pratica2\projetoPratica\ProjetoPratica\ProjetoPratica\obj\Debug\ProjetoPratica.csproj.GenerateResource.Cache
+Z:\Pratica2\projetoPratica\ProjetoPratica\ProjetoPratica\obj\Debug\ProjetoPratica.csproj.CoreCompileInputs.cache
+Z:\Pratica2\projetoPratica\ProjetoPratica\ProjetoPratica\obj\Debug\ProjetoPratica.exe
+Z:\Pratica2\projetoPratica\ProjetoPratica\ProjetoPratica\obj\Debug\ProjetoPratica.pdb
