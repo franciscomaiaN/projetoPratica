@@ -54,6 +54,12 @@
       <DependentUpon>BDPRII17178DataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Aula.cs" />
+    <Compile Include="CriarMateria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CriarMateria.Designer.cs">
+      <DependentUpon>CriarMateria.cs</DependentUpon>
+    </Compile>
     <Compile Include="Pagina.cs" />
     <Compile Include="Professor.cs" />
     <Compile Include="Professores.cs" />
@@ -71,6 +77,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="CriarMateria.resx">
+      <DependentUpon>CriarMateria.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmPrincipal.resx">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
     </EmbeddedResource>
