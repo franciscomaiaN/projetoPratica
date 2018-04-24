@@ -53,3 +53,15 @@ F:\Pratica\projetoPratica\ProjetoPratica\ProjetoPratica\obj\Debug\ProjetoPratica
 F:\Pratica\projetoPratica\ProjetoPratica\ProjetoPratica\obj\Debug\ProjetoPratica.csproj.CoreCompileInputs.cache
 F:\Pratica\projetoPratica\ProjetoPratica\ProjetoPratica\obj\Debug\ProjetoPratica.exe
 F:\Pratica\projetoPratica\ProjetoPratica\ProjetoPratica\obj\Debug\ProjetoPratica.pdb
+Z:\PPII\github\projetoPratica\ProjetoPratica\ProjetoPratica\bin\Debug\ProjetoPratica.exe.config
+Z:\PPII\github\projetoPratica\ProjetoPratica\ProjetoPratica\bin\Debug\ProjetoPratica.exe
+Z:\PPII\github\projetoPratica\ProjetoPratica\ProjetoPratica\bin\Debug\ProjetoPratica.pdb
+Z:\PPII\github\projetoPratica\ProjetoPratica\ProjetoPratica\obj\Debug\ProjetoPratica.csprojResolveAssemblyReference.cache
+Z:\PPII\github\projetoPratica\ProjetoPratica\ProjetoPratica\obj\Debug\ProjetoPratica.CriarMateria.resources
+Z:\PPII\github\projetoPratica\ProjetoPratica\ProjetoPratica\obj\Debug\ProjetoPratica.FrmPrincipal.resources
+Z:\PPII\github\projetoPratica\ProjetoPratica\ProjetoPratica\obj\Debug\ProjetoPratica.Login.resources
+Z:\PPII\github\projetoPratica\ProjetoPratica\ProjetoPratica\obj\Debug\ProjetoPratica.Properties.Resources.resources
+Z:\PPII\github\projetoPratica\ProjetoPratica\ProjetoPratica\obj\Debug\ProjetoPratica.csproj.GenerateResource.Cache
+Z:\PPII\github\projetoPratica\ProjetoPratica\ProjetoPratica\obj\Debug\ProjetoPratica.csproj.CoreCompileInputs.cache
+Z:\PPII\github\projetoPratica\ProjetoPratica\ProjetoPratica\obj\Debug\ProjetoPratica.exe
+Z:\PPII\github\projetoPratica\ProjetoPratica\ProjetoPratica\obj\Debug\ProjetoPratica.pdb
