@@ -42,3 +42,14 @@ Z:\Pratica2\projetoPratica\ProjetoPratica\ProjetoPratica\obj\Debug\ProjetoPratic
 Z:\Pratica2\projetoPratica\ProjetoPratica\ProjetoPratica\obj\Debug\ProjetoPratica.csproj.CoreCompileInputs.cache
 Z:\Pratica2\projetoPratica\ProjetoPratica\ProjetoPratica\obj\Debug\ProjetoPratica.exe
 Z:\Pratica2\projetoPratica\ProjetoPratica\ProjetoPratica\obj\Debug\ProjetoPratica.pdb
+F:\Pratica\projetoPratica\ProjetoPratica\ProjetoPratica\bin\Debug\ProjetoPratica.exe.config
+F:\Pratica\projetoPratica\ProjetoPratica\ProjetoPratica\bin\Debug\ProjetoPratica.exe
+F:\Pratica\projetoPratica\ProjetoPratica\ProjetoPratica\bin\Debug\ProjetoPratica.pdb
+F:\Pratica\projetoPratica\ProjetoPratica\ProjetoPratica\obj\Debug\ProjetoPratica.csprojResolveAssemblyReference.cache
+F:\Pratica\projetoPratica\ProjetoPratica\ProjetoPratica\obj\Debug\ProjetoPratica.FrmPrincipal.resources
+F:\Pratica\projetoPratica\ProjetoPratica\ProjetoPratica\obj\Debug\ProjetoPratica.Login.resources
+F:\Pratica\projetoPratica\ProjetoPratica\ProjetoPratica\obj\Debug\ProjetoPratica.Properties.Resources.resources
+F:\Pratica\projetoPratica\ProjetoPratica\ProjetoPratica\obj\Debug\ProjetoPratica.csproj.GenerateResource.Cache
+F:\Pratica\projetoPratica\ProjetoPratica\ProjetoPratica\obj\Debug\ProjetoPratica.csproj.CoreCompileInputs.cache
+F:\Pratica\projetoPratica\ProjetoPratica\ProjetoPratica\obj\Debug\ProjetoPratica.exe
+F:\Pratica\projetoPratica\ProjetoPratica\ProjetoPratica\obj\Debug\ProjetoPratica.pdb

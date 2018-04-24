@@ -135,8 +135,11 @@ namespace ProjetoPratica
             for(int i = 0; i < aulas.Length; i++)
             {
                 buttons[i] = new Button();
-                buttons[i].
-                this.components.Add();
+                buttons[i].Text = aulas[i];
+                buttons[i].Left = 150 + 30 * i;
+                buttons[i].Width = 120;
+                buttons[i].Height = 50;
+                this.components.Add(buttons[i]);
             }
         }
     }

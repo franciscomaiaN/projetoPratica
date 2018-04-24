@@ -30,11 +30,12 @@ namespace ProjetoPratica
             DataRow dr;
             String[] ret = new String[ds.Tables[0].Rows.Count];
 
-            for (int i = 0; i <= ds.Tables[0].Rows.Count; i++)
-            {
-                dr = ds.Tables[0].Rows[i];
-                ret[i] = dr.ItemArray[i].ToString();
-            }
+            if(ds.Tables[0].Rows.Count != 0)
+                for (int i = 0; i <= ds.Tables[0].Rows.Count; i++)
+                {
+                    dr = ds.Tables[0].Rows[i];
+                    ret[i] = dr.ItemArray[i].ToString();
+                }
 
             return ret;
         }
