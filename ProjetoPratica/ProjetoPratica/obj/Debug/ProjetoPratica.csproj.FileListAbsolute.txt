@@ -1,0 +1,33 @@
+Z:\Terceiro Semestre\Técnicas de Programação Visual\ProjetoPratica\ProjetoPratica\bin\Debug\ProjetoPratica.exe.config
+Z:\Terceiro Semestre\Técnicas de Programação Visual\ProjetoPratica\ProjetoPratica\bin\Debug\ProjetoPratica.exe
+Z:\Terceiro Semestre\Técnicas de Programação Visual\ProjetoPratica\ProjetoPratica\bin\Debug\ProjetoPratica.pdb
+Z:\Terceiro Semestre\Técnicas de Programação Visual\ProjetoPratica\ProjetoPratica\obj\Debug\ProjetoPratica.csprojResolveAssemblyReference.cache
+Z:\Terceiro Semestre\Técnicas de Programação Visual\ProjetoPratica\ProjetoPratica\obj\Debug\ProjetoPratica.Login.resources
+Z:\Terceiro Semestre\Técnicas de Programação Visual\ProjetoPratica\ProjetoPratica\obj\Debug\ProjetoPratica.Properties.Resources.resources
+Z:\Terceiro Semestre\Técnicas de Programação Visual\ProjetoPratica\ProjetoPratica\obj\Debug\ProjetoPratica.csproj.GenerateResource.Cache
+Z:\Terceiro Semestre\Técnicas de Programação Visual\ProjetoPratica\ProjetoPratica\obj\Debug\ProjetoPratica.csproj.CoreCompileInputs.cache
+Z:\Terceiro Semestre\Técnicas de Programação Visual\ProjetoPratica\ProjetoPratica\obj\Debug\ProjetoPratica.exe
+Z:\Terceiro Semestre\Técnicas de Programação Visual\ProjetoPratica\ProjetoPratica\obj\Debug\ProjetoPratica.pdb
+Z:\Terceiro Semestre\Técnicas de Programação Visual\ProjetoPratica\ProjetoPratica\obj\Debug\ProjetoPratica.frmPrincipal.resources
+Z:\Terceiro Semestre\Pratica\ProjetoPratica\ProjetoPratica\bin\Debug\ProjetoPratica.exe.config
+Z:\Terceiro Semestre\Pratica\ProjetoPratica\ProjetoPratica\bin\Debug\ProjetoPratica.exe
+Z:\Terceiro Semestre\Pratica\ProjetoPratica\ProjetoPratica\bin\Debug\ProjetoPratica.pdb
+Z:\Terceiro Semestre\Pratica\ProjetoPratica\ProjetoPratica\obj\Debug\ProjetoPratica.csprojResolveAssemblyReference.cache
+Z:\Terceiro Semestre\Pratica\ProjetoPratica\ProjetoPratica\obj\Debug\ProjetoPratica.FrmPrincipal.resources
+Z:\Terceiro Semestre\Pratica\ProjetoPratica\ProjetoPratica\obj\Debug\ProjetoPratica.Login.resources
+Z:\Terceiro Semestre\Pratica\ProjetoPratica\ProjetoPratica\obj\Debug\ProjetoPratica.Properties.Resources.resources
+Z:\Terceiro Semestre\Pratica\ProjetoPratica\ProjetoPratica\obj\Debug\ProjetoPratica.csproj.GenerateResource.Cache
+Z:\Terceiro Semestre\Pratica\ProjetoPratica\ProjetoPratica\obj\Debug\ProjetoPratica.csproj.CoreCompileInputs.cache
+Z:\Terceiro Semestre\Pratica\ProjetoPratica\ProjetoPratica\obj\Debug\ProjetoPratica.exe
+Z:\Terceiro Semestre\Pratica\ProjetoPratica\ProjetoPratica\obj\Debug\ProjetoPratica.pdb
+Z:\PPII\ProjetoPratica\ProjetoPratica\obj\Debug\ProjetoPratica.csprojResolveAssemblyReference.cache
+Z:\PPII\ProjetoPratica\ProjetoPratica\obj\Debug\ProjetoPratica.FrmPrincipal.resources
+Z:\PPII\ProjetoPratica\ProjetoPratica\obj\Debug\ProjetoPratica.Login.resources
+Z:\PPII\ProjetoPratica\ProjetoPratica\obj\Debug\ProjetoPratica.Properties.Resources.resources
+Z:\PPII\ProjetoPratica\ProjetoPratica\obj\Debug\ProjetoPratica.csproj.GenerateResource.Cache
+Z:\PPII\ProjetoPratica\ProjetoPratica\obj\Debug\ProjetoPratica.csproj.CoreCompileInputs.cache
+Z:\PPII\ProjetoPratica\ProjetoPratica\obj\Debug\ProjetoPratica.exe
+Z:\PPII\ProjetoPratica\ProjetoPratica\obj\Debug\ProjetoPratica.pdb
+Z:\PPII\ProjetoPratica\ProjetoPratica\bin\Debug\ProjetoPratica.exe.config
+Z:\PPII\ProjetoPratica\ProjetoPratica\bin\Debug\ProjetoPratica.exe
+Z:\PPII\ProjetoPratica\ProjetoPratica\bin\Debug\ProjetoPratica.pdb
