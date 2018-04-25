@@ -15,6 +15,7 @@ namespace ProjetoPratica
     {
         private Aluno aluno = null;
         private Professor professor = null;
+        private string[,] aula;
 
         public Aluno Aluno
         {
@@ -130,6 +131,8 @@ namespace ProjetoPratica
             groupBox2.Visible = false;
             string[] aulas = Aulas.GetAulas("Portugues");
 
+            this.aula = new string[12, (aulas.Length/12)];
+
             Label lblNome = new Label();
             lblNome.Text = "Aulas de Portugues";
             lblNome.Width = 250;
@@ -141,25 +144,32 @@ namespace ProjetoPratica
             Button[] buttons = new Button[aulas.Length];
             for(int i = 0; i < aulas.Length; i++)
             {
-                
-                buttons[i] = new Button();
-                buttons[i].Text = aulas[i];
+                int j = 0;
+                this.aula[j][i] = aulas[i];
 
-                buttons[i].Top = top;
-                if ((i+1) % 3 == 0)
+                if ((i + 1) % 12 == 0) j++;
+                if (i <= 12)
                 {
-                    top += 70;
-                    buttons[i].Left = 590;
-                }
-                else
-                    if ((i+1) % 3 == 1)
+                    this.aula[0][i] = aulas[i];
+                    buttons[i] = new Button();
+                    buttons[i].Text = aulas[i];
+
+                    buttons[i].Top = top;
+                    if ((i + 1) % 3 == 0)
+                    {
+                        top += 70;
+                        buttons[i].Left = 590;
+                    }
+                    else
+                        if ((i + 1) % 3 == 1)
                         buttons[i].Left = 310;
                     else
                         buttons[i].Left = 450;
 
-                buttons[i].Width = 120;
-                buttons[i].Height = 50;
-                this.Controls.Add(buttons[i]);
+                    buttons[i].Width = 120;
+                    buttons[i].Height = 50;
+                    this.Controls.Add(buttons[i]);
+                }
             }
         }
     }
