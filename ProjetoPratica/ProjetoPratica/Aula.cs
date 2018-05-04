@@ -12,6 +12,7 @@ namespace ProjetoPratica
         private string materia;
         private Pagina[] paginas;
         private string titulo;
+        //private Pergunta[] perguntas;
 
         public string Titulo
         {

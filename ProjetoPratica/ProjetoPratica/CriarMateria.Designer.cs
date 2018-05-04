@@ -35,20 +35,22 @@
             this.label3 = new System.Windows.Forms.Label();
             this.btnProxima = new System.Windows.Forms.Button();
             this.btnAnterior = new System.Windows.Forms.Button();
-            this.btnCriar = new System.Windows.Forms.Button();
+            this.btnFinalizar = new System.Windows.Forms.Button();
             this.txtTitulo = new System.Windows.Forms.TextBox();
             this.rbA = new System.Windows.Forms.RadioButton();
             this.rbB = new System.Windows.Forms.RadioButton();
             this.rbC = new System.Windows.Forms.RadioButton();
             this.rbD = new System.Windows.Forms.RadioButton();
             this.txtDisciplina = new System.Windows.Forms.TextBox();
-            this.cbxNumPer = new System.Windows.Forms.ComboBox();
             this.cbxAlternativa = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.txtAlternativa = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtPergunta = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -111,14 +113,14 @@
             this.btnAnterior.Text = "<< Anterior";
             this.btnAnterior.UseVisualStyleBackColor = true;
             // 
-            // btnCriar
+            // btnFinalizar
             // 
-            this.btnCriar.Location = new System.Drawing.Point(376, 368);
-            this.btnCriar.Name = "btnCriar";
-            this.btnCriar.Size = new System.Drawing.Size(75, 23);
-            this.btnCriar.TabIndex = 8;
-            this.btnCriar.Text = "Criar";
-            this.btnCriar.UseVisualStyleBackColor = true;
+            this.btnFinalizar.Location = new System.Drawing.Point(354, 354);
+            this.btnFinalizar.Name = "btnFinalizar";
+            this.btnFinalizar.Size = new System.Drawing.Size(75, 23);
+            this.btnFinalizar.TabIndex = 8;
+            this.btnFinalizar.Text = "Finalizar";
+            this.btnFinalizar.UseVisualStyleBackColor = true;
             // 
             // txtTitulo
             // 
@@ -180,20 +182,6 @@
             this.txtDisciplina.Size = new System.Drawing.Size(121, 20);
             this.txtDisciplina.TabIndex = 15;
             // 
-            // cbxNumPer
-            // 
-            this.cbxNumPer.FormattingEnabled = true;
-            this.cbxNumPer.Items.AddRange(new object[] {
-            "Pergunta 1",
-            "Pergunta 2",
-            "Pergunta 3",
-            "Pergunta 4",
-            "Pergunta 5"});
-            this.cbxNumPer.Location = new System.Drawing.Point(492, 9);
-            this.cbxNumPer.Name = "cbxNumPer";
-            this.cbxNumPer.Size = new System.Drawing.Size(121, 21);
-            this.cbxNumPer.TabIndex = 20;
-            // 
             // cbxAlternativa
             // 
             this.cbxAlternativa.FormattingEnabled = true;
@@ -251,25 +239,53 @@
             this.button1.Text = "Adicionar Pergunta";
             this.button1.UseVisualStyleBackColor = true;
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(420, 142);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(60, 13);
+            this.label7.TabIndex = 27;
+            this.label7.Text = "Alternativa:";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(387, 12);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(93, 13);
+            this.label8.TabIndex = 28;
+            this.label8.Text = "Numero Pergunta:";
+            // 
+            // txtPergunta
+            // 
+            this.txtPergunta.Location = new System.Drawing.Point(492, 9);
+            this.txtPergunta.Name = "txtPergunta";
+            this.txtPergunta.ReadOnly = true;
+            this.txtPergunta.Size = new System.Drawing.Size(121, 20);
+            this.txtPergunta.TabIndex = 29;
+            // 
             // CriarMateria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(826, 455);
+            this.ClientSize = new System.Drawing.Size(769, 398);
+            this.Controls.Add(this.txtPergunta);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.txtAlternativa);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.cbxAlternativa);
-            this.Controls.Add(this.cbxNumPer);
             this.Controls.Add(this.txtDisciplina);
             this.Controls.Add(this.rbD);
             this.Controls.Add(this.rbC);
             this.Controls.Add(this.rbB);
             this.Controls.Add(this.rbA);
             this.Controls.Add(this.txtTitulo);
-            this.Controls.Add(this.btnCriar);
+            this.Controls.Add(this.btnFinalizar);
             this.Controls.Add(this.btnAnterior);
             this.Controls.Add(this.btnProxima);
             this.Controls.Add(this.label3);
@@ -293,19 +309,21 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnProxima;
         private System.Windows.Forms.Button btnAnterior;
-        private System.Windows.Forms.Button btnCriar;
+        private System.Windows.Forms.Button btnFinalizar;
         private System.Windows.Forms.TextBox txtTitulo;
         private System.Windows.Forms.RadioButton rbA;
         private System.Windows.Forms.RadioButton rbB;
         private System.Windows.Forms.RadioButton rbC;
         private System.Windows.Forms.RadioButton rbD;
         private System.Windows.Forms.TextBox txtDisciplina;
-        private System.Windows.Forms.ComboBox cbxNumPer;
         private System.Windows.Forms.ComboBox cbxAlternativa;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtAlternativa;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox txtPergunta;
     }
 }

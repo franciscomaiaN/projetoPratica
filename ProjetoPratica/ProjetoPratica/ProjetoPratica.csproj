@@ -61,6 +61,7 @@
       <DependentUpon>CriarMateria.cs</DependentUpon>
     </Compile>
     <Compile Include="Pagina.cs" />
+    <Compile Include="Pergunta.cs" />
     <Compile Include="Professor.cs" />
     <Compile Include="Professores.cs" />
     <Compile Include="FrmPrincipal.cs">
