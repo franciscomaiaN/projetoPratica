@@ -16,6 +16,7 @@ namespace ProjetoPratica
         private Aluno aluno = null;
         private Professor professor = null;
         private string[,] aula;
+        private int pag;
 
         public Aluno Aluno
         {
@@ -129,28 +130,27 @@ namespace ProjetoPratica
         private void btnPort_Click(object sender, EventArgs e)
         {
             groupBox2.Visible = false;
-            string[] aulas = Aulas.GetAulas("Portugues");
+            string[] aulas = Aulas.GetAulas(((Button)sender).Text);
 
-            this.aula = new string[12, (aulas.Length/12)];
+            this.aula = new string[12, (int)Math.Ceiling((float)aulas.Length/12)];
 
-            Label lblNome = new Label();
-            lblNome.Text = "Aulas de Portugues";
-            lblNome.Width = 250;
-            lblNome.Top = 10;
-            lblNome.Left = 420;
-            this.Controls.Add(lblNome);
+            Label lblNomeMat = new Label();
+            lblNomeMat.Text = "Aulas de "+ ((Button)sender).Text; 
+            lblNomeMat.Width = 250;
+            lblNomeMat.Top = 10;
+            lblNomeMat.Left = 420;
+            this.Controls.Add(lblNomeMat);
 
             int top = 80;
             Button[] buttons = new Button[aulas.Length];
             for(int i = 0; i < aulas.Length; i++)
             {
                 int j = 0;
-                this.aula[j][i] = aulas[i];
+                this.aula[i,j] = aulas[i];
 
                 if ((i + 1) % 12 == 0) j++;
                 if (i <= 12)
                 {
-                    this.aula[0][i] = aulas[i];
                     buttons[i] = new Button();
                     buttons[i].Text = aulas[i];
 
@@ -170,6 +170,71 @@ namespace ProjetoPratica
                     buttons[i].Height = 50;
                     this.Controls.Add(buttons[i]);
                 }
+            }
+
+            this.pag = 0;
+
+            Button voltar = new Button();
+            voltar.Text = "Voltar";
+            voltar.Width = 100;
+            voltar.Height = 30;
+            voltar.Left = 310;
+            voltar.Top = 390;
+            voltar.Click += (s, args) =>
+            {
+                groupBox2.Show();
+                this.Controls.Remove(lblNomeMat);
+                try
+                {
+                    for (int i = 0; ; i++)
+                        this.Controls.Remove(buttons[i]);
+                }
+                catch (Exception) { }
+            };
+            this.Controls.Add(voltar);
+
+            Button pagAnt = new Button();
+            pagAnt.Text = "<<<";
+            pagAnt.Width = 70;
+            pagAnt.Height = 30;
+            pagAnt.Left = 440;
+            pagAnt.Top = 390;
+            pagAnt.Enabled = false;
+            pagAnt.Click += (s, args) =>
+            {
+                this.pag--;
+            };
+            this.Controls.Add(pagAnt);
+
+            Button pagDep = new Button();
+            pagDep.Text = ">>>";
+            pagDep.Width = 70;
+            pagDep.Height = 30;
+            pagDep.Left = 520;
+            pagDep.Top = 390;
+            if (this.pag == (int)Math.Ceiling((float)aulas.Length / 12)) pagDep.Enabled = false;
+            pagDep.Click += (s, args) =>
+            {
+                this.pag++;
+                if (this.pag == (int)Math.Ceiling((float)aulas.Length / 12)) pagDep.Enabled = false;
+
+            };
+            this.Controls.Add(pagDep);
+
+            if (this.professor != null)
+            {
+                Button novaAula = new Button();
+                novaAula.Text = "Nova Aula";
+                novaAula.Width = 100;
+                novaAula.Height = 30;
+                novaAula.Left = 610;
+                novaAula.Top = 390;
+                novaAula.Click += (s, args) =>
+                {
+                    CriarMateria frmNovaMat = new CriarMateria();
+                    frmNovaMat.Show();
+                };
+                this.Controls.Add(novaAula);
             }
         }
     }

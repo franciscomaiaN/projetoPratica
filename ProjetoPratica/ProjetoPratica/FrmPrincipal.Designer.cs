@@ -185,6 +185,7 @@
             this.btnGeo.TabIndex = 5;
             this.btnGeo.Text = "Geografia";
             this.btnGeo.UseVisualStyleBackColor = false;
+            this.btnGeo.Click += new System.EventHandler(this.btnPort_Click);
             // 
             // btnHist
             // 
@@ -195,8 +196,9 @@
             this.btnHist.Name = "btnHist";
             this.btnHist.Size = new System.Drawing.Size(334, 42);
             this.btnHist.TabIndex = 4;
-            this.btnHist.Text = "História";
+            this.btnHist.Text = "Historia";
             this.btnHist.UseVisualStyleBackColor = false;
+            this.btnHist.Click += new System.EventHandler(this.btnPort_Click);
             // 
             // btnCie
             // 
@@ -207,8 +209,9 @@
             this.btnCie.Name = "btnCie";
             this.btnCie.Size = new System.Drawing.Size(334, 42);
             this.btnCie.TabIndex = 3;
-            this.btnCie.Text = "Ciências";
+            this.btnCie.Text = "Ciencias";
             this.btnCie.UseVisualStyleBackColor = false;
+            this.btnCie.Click += new System.EventHandler(this.btnPort_Click);
             // 
             // btnMat
             // 
@@ -219,8 +222,9 @@
             this.btnMat.Name = "btnMat";
             this.btnMat.Size = new System.Drawing.Size(334, 42);
             this.btnMat.TabIndex = 2;
-            this.btnMat.Text = "Matemática";
+            this.btnMat.Text = "Matematica";
             this.btnMat.UseVisualStyleBackColor = false;
+            this.btnMat.Click += new System.EventHandler(this.btnPort_Click);
             // 
             // label1
             // 
@@ -241,7 +245,7 @@
             this.btnPort.Name = "btnPort";
             this.btnPort.Size = new System.Drawing.Size(334, 42);
             this.btnPort.TabIndex = 0;
-            this.btnPort.Text = "Português";
+            this.btnPort.Text = "Portugues";
             this.btnPort.UseVisualStyleBackColor = false;
             this.btnPort.Click += new System.EventHandler(this.btnPort_Click);
             // 
