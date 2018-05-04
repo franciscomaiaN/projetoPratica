@@ -47,7 +47,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.txtAlternativa = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnAdicionar = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.txtPergunta = new System.Windows.Forms.TextBox();
@@ -186,14 +186,15 @@
             // 
             this.cbxAlternativa.FormattingEnabled = true;
             this.cbxAlternativa.Items.AddRange(new object[] {
-            "Alternativa A",
-            "Alternativa B",
-            "Alternativa C",
-            "Alternativa D"});
+            "A",
+            "B",
+            "C",
+            "D"});
             this.cbxAlternativa.Location = new System.Drawing.Point(492, 139);
             this.cbxAlternativa.Name = "cbxAlternativa";
             this.cbxAlternativa.Size = new System.Drawing.Size(121, 21);
             this.cbxAlternativa.TabIndex = 21;
+            this.cbxAlternativa.SelectedIndexChanged += new System.EventHandler(this.cbxAlternativa_SelectedIndexChanged);
             // 
             // label5
             // 
@@ -230,14 +231,15 @@
             this.txtAlternativa.Size = new System.Drawing.Size(256, 84);
             this.txtAlternativa.TabIndex = 25;
             // 
-            // button1
+            // btnAdicionar
             // 
-            this.button1.Location = new System.Drawing.Point(640, 305);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(108, 23);
-            this.button1.TabIndex = 26;
-            this.button1.Text = "Adicionar Pergunta";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnAdicionar.Location = new System.Drawing.Point(640, 305);
+            this.btnAdicionar.Name = "btnAdicionar";
+            this.btnAdicionar.Size = new System.Drawing.Size(108, 23);
+            this.btnAdicionar.TabIndex = 26;
+            this.btnAdicionar.Text = "Adicionar Pergunta";
+            this.btnAdicionar.UseVisualStyleBackColor = true;
+            this.btnAdicionar.Click += new System.EventHandler(this.btnAdicionar_Click);
             // 
             // label7
             // 
@@ -264,6 +266,7 @@
             this.txtPergunta.ReadOnly = true;
             this.txtPergunta.Size = new System.Drawing.Size(121, 20);
             this.txtPergunta.TabIndex = 29;
+            this.txtPergunta.Text = "1";
             // 
             // CriarMateria
             // 
@@ -273,7 +276,7 @@
             this.Controls.Add(this.txtPergunta);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnAdicionar);
             this.Controls.Add(this.txtAlternativa);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label6);
@@ -321,7 +324,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtAlternativa;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnAdicionar;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtPergunta;

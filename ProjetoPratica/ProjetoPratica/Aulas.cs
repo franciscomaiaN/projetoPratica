@@ -67,6 +67,24 @@ namespace ProjetoPratica
                 pag[i] = new Pagina(dr.ItemArray[0].ToString());
             }
 
+            cmd = new SqlCommand("Select pergunta, alternativaA, alternativaB, alternativaC, alternativaD, resposta from pergunta where aula = @aula", con);
+            cmd.Parameters.AddWithValue("@aula", titulo);
+
+            con.Open();
+            adapt = new SqlDataAdapter(cmd);
+
+            adapt.Fill(ds);
+            con.Close();
+            Pergunta[] perg = new Pergunta[ds.Tables[0].Rows.Count];
+
+            for (int i = 0; i <= ds.Tables[0].Rows.Count; i++)
+            {
+                dr = ds.Tables[0].Rows[i];
+                perg[i] = new Pergunta(dr.ItemArray[0].ToString(), dr.ItemArray[1].ToString(), dr.ItemArray[2].ToString(), dr.ItemArray[3].ToString(),
+                                       dr.ItemArray[4].ToString(), dr.ItemArray[5].ToString().ToCharArray()[0]);
+            }
+
+
             cmd = new SqlCommand("Select * from aula where titulo = @titulo", con);
             cmd.Parameters.AddWithValue("@titulo", titulo);
 
@@ -80,7 +98,7 @@ namespace ProjetoPratica
             if (ds.Tables[0].Rows.Count == 1)
             {
                 dr = ds.Tables[0].Rows[1];
-                ret = new Aula(dr.ItemArray[0].ToString(), dr.ItemArray[1].ToString(), dr.ItemArray[2].ToString(), pag);
+                ret = new Aula(dr.ItemArray[0].ToString(), dr.ItemArray[1].ToString(), dr.ItemArray[2].ToString(), pag, perg);
             }
             else
                 throw new Exception("Aula inexistente");
@@ -102,6 +120,34 @@ namespace ProjetoPratica
             con.Open();
             cmd.ExecuteNonQuery();
             con.Close();
+
+            for (int i = 0; i < nova.Paginas.Length; i++)
+            {
+                cmd = new SqlCommand("Insert into paginaAula values(@aula, @texto)", con);
+                cmd.Parameters.AddWithValue("@aula", nova.Titulo);
+                cmd.Parameters.AddWithValue("@texto", nova.Paginas[i]);
+
+                con.Open();
+                cmd.ExecuteNonQuery();
+                con.Close();
+            }
+
+            for (int i = 0; i < nova.Perguntas.Length; i++)
+            {
+                cmd = new SqlCommand("Insert into pergunta values(@texto, @a, @b, @c, @d, @resp, @materia, @aula)", con);
+                cmd.Parameters.AddWithValue("@texto", nova.Perguntas[i].TextoAlternativa);
+                cmd.Parameters.AddWithValue("@a", nova.Perguntas[i].AlternativaA);
+                cmd.Parameters.AddWithValue("@b", nova.Perguntas[i].AlternativaB);
+                cmd.Parameters.AddWithValue("@c", nova.Perguntas[i].AlternativaC);
+                cmd.Parameters.AddWithValue("@d", nova.Perguntas[i].AlternativaD);
+                cmd.Parameters.AddWithValue("@resp", nova.Perguntas[i].Certa);
+                cmd.Parameters.AddWithValue("@materia", nova.Materia);
+                cmd.Parameters.AddWithValue("@aula", nova.Titulo);
+
+                con.Open();
+                cmd.ExecuteNonQuery();
+                con.Close();
+            }
         }
     }
 }

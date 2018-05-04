@@ -12,7 +12,7 @@ namespace ProjetoPratica
         private string materia;
         private Pagina[] paginas;
         private string titulo;
-        //private Pergunta[] perguntas;
+        private Pergunta[] perguntas;
 
         public string Titulo
         {
@@ -70,7 +70,21 @@ namespace ProjetoPratica
             }
         }
 
-        public Aula(string titulo, string prof, string materia, Pagina[] paginas)
+        public Pergunta[] Perguntas
+        {
+            get
+            {
+                return this.perguntas;
+            }
+            set
+            {
+                if (value == null)
+                    throw new Exception("Impossivel ser nulo!");
+                this.perguntas = value;
+            }
+        }
+
+        public Aula(string titulo, string prof, string materia, Pagina[] paginas, Pergunta[] perguntas)
         {
             if (prof == null)
                 throw new Exception("Professor nulo!");
@@ -81,10 +95,14 @@ namespace ProjetoPratica
             if (paginas == null)
                 throw new Exception("Paginas nulas!!");
 
+            if (perguntas == null)
+                throw new Exception("Perguntas nulas!!");
+
             this.titulo = titulo;
             this.professor = prof;
             this.materia = materia;
             this.paginas = paginas;
+            this.perguntas = perguntas;
         }
 
 /*      public override string ToString()
