@@ -106,6 +106,7 @@
             // 
             // btnAnterior
             // 
+            this.btnAnterior.Enabled = false;
             this.btnAnterior.Location = new System.Drawing.Point(84, 205);
             this.btnAnterior.Name = "btnAnterior";
             this.btnAnterior.Size = new System.Drawing.Size(75, 23);
@@ -115,6 +116,7 @@
             // 
             // btnFinalizar
             // 
+            this.btnFinalizar.Enabled = false;
             this.btnFinalizar.Location = new System.Drawing.Point(354, 354);
             this.btnFinalizar.Name = "btnFinalizar";
             this.btnFinalizar.Size = new System.Drawing.Size(75, 23);
