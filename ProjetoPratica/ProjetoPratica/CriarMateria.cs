@@ -17,11 +17,39 @@ namespace ProjetoPratica
         private string c = "";
         private string d = "";
         private string anterior = "A";
-        private Pergunta[] perguntas = new Pergunta[6];
+        private Pergunta[] perguntas = new Pergunta[5];
+        private Pagina[] paginas;
 
         public CriarMateria()
         {
             InitializeComponent();
+        }
+
+        private void LimparPerguntas()
+        {
+            a = "";
+            b = "";
+            c = "";
+            d = "";
+            anterior = "A";
+
+            txtTitulo.Text = "";
+            txtAlternativa.Text = "";
+            cbxAlternativa.SelectedIndex = 0;
+        }
+
+        private char respostaCorreta()
+        {
+            if (rbA.Checked)
+                return 'A';
+
+            if (rbB.Checked)
+                return 'B';
+
+            if (rbC.Checked)
+                return 'C';
+
+            return 'D';
         }
 
         private void cbxAlternativa_SelectedIndexChanged(object sender, EventArgs e)
@@ -103,6 +131,29 @@ namespace ProjetoPratica
             if (!rbA.Checked && !rbB.Checked && !rbC.Checked && !rbD.Checked)
             {
                 MessageBox.Show("Voce deve selecionar alguma reposta como a certa");
+                return;
+            }
+
+            int perg = Convert.ToInt32(txtPergunta.Text);
+
+            perguntas[perg - 1] = new Pergunta(txtTitulo.Text, a, b, c, d, respostaCorreta());
+
+            
+            MessageBox.Show("Pergunta "+ perg.ToString() + " Adicionada!!");
+            perg++;
+
+            if (perg == 7)
+            {
+                LimparPerguntas();
+                txtAlternativa.ReadOnly = true;
+                txtTitulo.ReadOnly = true;
+                cbxAlternativa.Enabled = false;
+                btnFinalizar.Enabled = true;
+            }
+            else
+            {
+                LimparPerguntas();
+                txtPergunta.Text = perg.ToString();
             }
         }
     }
