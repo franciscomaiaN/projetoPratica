@@ -17,6 +17,7 @@ namespace ProjetoPratica
         private string c = "";
         private string d = "";
         private string anterior = "A";
+        private Pergunta[] perguntas = new Pergunta[6];
 
         public CriarMateria()
         {
@@ -97,6 +98,11 @@ namespace ProjetoPratica
             {
                 MessageBox.Show("Voce deve preencher todas as alternativas!!");
                 return;
+            }
+
+            if (!rbA.Checked && !rbB.Checked && !rbC.Checked && !rbD.Checked)
+            {
+                MessageBox.Show("Voce deve selecionar alguma reposta como a certa");
             }
         }
     }
