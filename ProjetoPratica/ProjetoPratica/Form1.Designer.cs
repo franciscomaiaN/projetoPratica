@@ -281,9 +281,9 @@
             this.groupBox1.Controls.Add(this.pictureBox3);
             this.groupBox1.Controls.Add(this.picBKoro);
             this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.groupBox1.Location = new System.Drawing.Point(-2, -7);
+            this.groupBox1.Location = new System.Drawing.Point(-7, -7);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(809, 536);
+            this.groupBox1.Size = new System.Drawing.Size(823, 536);
             this.groupBox1.TabIndex = 16;
             this.groupBox1.TabStop = false;
             this.groupBox1.Visible = false;
@@ -339,7 +339,7 @@
             this.lblNomeProf.AutoSize = true;
             this.lblNomeProf.BackColor = System.Drawing.Color.White;
             this.lblNomeProf.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNomeProf.Location = new System.Drawing.Point(357, 140);
+            this.lblNomeProf.Location = new System.Drawing.Point(294, 141);
             this.lblNomeProf.Name = "lblNomeProf";
             this.lblNomeProf.Size = new System.Drawing.Size(81, 29);
             this.lblNomeProf.TabIndex = 18;

@@ -239,6 +239,8 @@ namespace ProjetoPratica
 
             paginaAtual = -1;
             perguntaAtual = -1;
+            btnAnt.Enabled = false;
+            btnProx.Enabled = true;
             groupBox1.Visible = false;
         }
     }

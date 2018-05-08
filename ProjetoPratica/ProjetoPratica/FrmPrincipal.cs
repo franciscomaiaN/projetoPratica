@@ -143,9 +143,12 @@ namespace ProjetoPratica
             lblNomeMat.Left = 440;
             this.Controls.Add(lblNomeMat);
 
-            string[] nomes = new string[12];
-            for (int i = 0; i < 12; i++)
-                nomes[i] = aulas[i];
+            string[] nomes;
+            if (aulas.Length >= 12) nomes = new string[12];
+            else nomes = new string[aulas.Length];
+
+            for (int i = 0; i < 12 && i < aulas.Length; i++)
+                    nomes[i] = aulas[i];         
 
             int top = 80;
             Button[] buttons = new Button[nomes.Length];
@@ -199,14 +202,10 @@ namespace ProjetoPratica
             voltar.Click += (s, args) =>
             {
                 groupBox2.Show();
+                this.pag = 0;
                 this.Controls.Remove(voltar);
                 this.Controls.Remove(lblNomeMat);
-                try
-                {
-                    for (int i = 0; ; i++)
-                        this.Controls.Remove(buttons[i]);
-                }
-                catch (Exception) { }
+                foreach (Button button in buttons) this.Controls.Remove(button);
             };
             this.Controls.Add(voltar);
 
@@ -224,25 +223,25 @@ namespace ProjetoPratica
             pagDep.Height = 30;
             pagDep.Left = 520;
             pagDep.Top = 390;
-            if (this.pag == (int)Math.Ceiling((float)aulas.Length / 12)-1) pagDep.Enabled = false;
+            if (this.pag == (int)Math.Ceiling((float)aulas.Length / 12)) pagDep.Enabled = false;
             pagDep.Click += (s, args) =>
             {
                 this.pag++;
-                if (this.pag == 0) pagAnt.Enabled = false;
-                if (this.pag == (int)Math.Ceiling((float)aulas.Length / 12) - 1) pagDep.Enabled = false;
+                pagAnt.Enabled = true;
+                if (this.pag == (int)Math.Ceiling((float)(aulas.Length / 12))) pagDep.Enabled = false;
 
-                try {for(int i = 0;;i++)this.Controls.Remove(buttons[i]);}catch(Exception){}
+                foreach(Button button in buttons)this.Controls.Remove(button);
 
-                try
-                {
-                    for (int i = this.pag * 12; i < this.pag * 24; i++)
-                        nomes[i] = aulas[i];
-                }
-                catch (Exception) { }
+                if (aulas.Length - this.pag * 12 >= 12) nomes = new string[12];
+                else nomes = new string[aulas.Length - this.pag * 12];
 
+                int z = -1;
+                for (int i = this.pag * 12; i < (this.pag * 12)+12 && i < aulas.Length; i++)
+                    nomes[++z] = aulas[i];
+ 
                 top = 80;
-                buttons = new Button[nomes.Length];
-                for (int i = 0; i < nomes.Length; i++)
+                buttons = new Button[12];
+                for (int i = 0;i < nomes.Length; i++)
                 {
                     int j = 0;
 
@@ -275,15 +274,19 @@ namespace ProjetoPratica
             {
                 this.pag--;
                 if (this.pag == 0) pagAnt.Enabled = false;
-                if (this.pag == (int)Math.Ceiling((float)aulas.Length / 12) - 1) pagDep.Enabled = false;
+                pagDep.Enabled = true;
 
-                try { for (int i = 0; ; i++) this.Controls.Remove(buttons[i]); } catch (Exception) { }
+                foreach (Button button in buttons) this.Controls.Remove(button);
 
-                for (int i = this.pag * 12; i < this.pag * 24; i++)
-                    nomes[i] = aulas[i];
+                if (aulas.Length - this.pag * 12 >= 12) nomes = new string[12];
+                else nomes = new string[aulas.Length - this.pag * 12];
+
+                int z = -1;
+                for (int i = this.pag * 12; i < (this.pag * 12)+12 && i < aulas.Length; i++)
+                    nomes[++z] = aulas[i];
 
                 top = 80;
-                buttons = new Button[nomes.Length];
+                buttons = new Button[12];
                 for (int i = 0; i < nomes.Length; i++)
                 {
                     int j = 0;
