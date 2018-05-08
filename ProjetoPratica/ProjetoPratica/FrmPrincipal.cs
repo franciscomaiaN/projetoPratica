@@ -15,7 +15,6 @@ namespace ProjetoPratica
     {
         private Aluno aluno = null;
         private Professor professor = null;
-        private string[,] aula;
         private int pag;
 
         public Aluno Aluno
@@ -127,32 +126,39 @@ namespace ProjetoPratica
 
         }
 
+        private void adicionaBotoes(string[] nomes)
+        {
+            
+        }
+
         private void btnPort_Click(object sender, EventArgs e)
         {
             groupBox2.Visible = false;
             string[] aulas = Aulas.GetAulas(((Button)sender).Text);
 
-            this.aula = new string[12, (int)Math.Ceiling((float)aulas.Length/12)];
-
             Label lblNomeMat = new Label();
             lblNomeMat.Text = "Aulas de "+ ((Button)sender).Text; 
             lblNomeMat.Width = 250;
             lblNomeMat.Top = 10;
-            lblNomeMat.Left = 420;
+            lblNomeMat.Left = 440;
             this.Controls.Add(lblNomeMat);
 
+            string[] nomes = new string[12];
+            for (int i = 0; i < 12; i++)
+                nomes[i] = aulas[i];
+
             int top = 80;
-            Button[] buttons = new Button[aulas.Length];
-            for(int i = 0; i < aulas.Length; i++)
+            Button[] buttons = new Button[nomes.Length];
+            for (int i = 0; i < nomes.Length; i++)
             {
                 int j = 0;
-                this.aula[i,j] = aulas[i];
 
                 if ((i + 1) % 12 == 0) j++;
-                if (i <= 12)
+
+                if (i < 12)
                 {
                     buttons[i] = new Button();
-                    buttons[i].Text = aulas[i];
+                    buttons[i].Text = nomes[i];
 
                     buttons[i].Top = top;
                     if ((i + 1) % 3 == 0)
@@ -168,6 +174,16 @@ namespace ProjetoPratica
 
                     buttons[i].Width = 120;
                     buttons[i].Height = 50;
+                    buttons[i].Click += (s, args) =>
+                    {
+                        Form1 form1 = new Form1(((Button)s).Text);
+                        form1.FormClosed += (se, ags) => 
+                        {
+                            this.Show();
+                        };
+                        form1.Show();
+                        this.Hide();
+                    };
                     this.Controls.Add(buttons[i]);
                 }
             }
@@ -183,6 +199,7 @@ namespace ProjetoPratica
             voltar.Click += (s, args) =>
             {
                 groupBox2.Show();
+                this.Controls.Remove(voltar);
                 this.Controls.Remove(lblNomeMat);
                 try
                 {
@@ -200,11 +217,6 @@ namespace ProjetoPratica
             pagAnt.Left = 440;
             pagAnt.Top = 390;
             pagAnt.Enabled = false;
-            pagAnt.Click += (s, args) =>
-            {
-                this.pag--;
-            };
-            this.Controls.Add(pagAnt);
 
             Button pagDep = new Button();
             pagDep.Text = ">>>";
@@ -212,13 +224,96 @@ namespace ProjetoPratica
             pagDep.Height = 30;
             pagDep.Left = 520;
             pagDep.Top = 390;
-            if (this.pag == (int)Math.Ceiling((float)aulas.Length / 12)) pagDep.Enabled = false;
+            if (this.pag == (int)Math.Ceiling((float)aulas.Length / 12)-1) pagDep.Enabled = false;
             pagDep.Click += (s, args) =>
             {
                 this.pag++;
-                if (this.pag == (int)Math.Ceiling((float)aulas.Length / 12)) pagDep.Enabled = false;
+                if (this.pag == 0) pagAnt.Enabled = false;
+                if (this.pag == (int)Math.Ceiling((float)aulas.Length / 12) - 1) pagDep.Enabled = false;
 
+                try {for(int i = 0;;i++)this.Controls.Remove(buttons[i]);}catch(Exception){}
+
+                try
+                {
+                    for (int i = this.pag * 12; i < this.pag * 24; i++)
+                        nomes[i] = aulas[i];
+                }
+                catch (Exception) { }
+
+                top = 80;
+                buttons = new Button[nomes.Length];
+                for (int i = 0; i < nomes.Length; i++)
+                {
+                    int j = 0;
+
+                    if ((i + 1) % 12 == 0) j++;
+
+                    if (i < 12)
+                    {
+                        buttons[i] = new Button();
+                        buttons[i].Text = nomes[i];
+
+                        buttons[i].Top = top;
+                        if ((i + 1) % 3 == 0)
+                        {
+                            top += 70;
+                            buttons[i].Left = 590;
+                        }
+                        else
+                            if ((i + 1) % 3 == 1)
+                            buttons[i].Left = 310;
+                        else
+                            buttons[i].Left = 450;
+
+                        buttons[i].Width = 120;
+                        buttons[i].Height = 50;
+                        this.Controls.Add(buttons[i]);
+                    }
+                }
             };
+            pagAnt.Click += (s, args) =>
+            {
+                this.pag--;
+                if (this.pag == 0) pagAnt.Enabled = false;
+                if (this.pag == (int)Math.Ceiling((float)aulas.Length / 12) - 1) pagDep.Enabled = false;
+
+                try { for (int i = 0; ; i++) this.Controls.Remove(buttons[i]); } catch (Exception) { }
+
+                for (int i = this.pag * 12; i < this.pag * 24; i++)
+                    nomes[i] = aulas[i];
+
+                top = 80;
+                buttons = new Button[nomes.Length];
+                for (int i = 0; i < nomes.Length; i++)
+                {
+                    int j = 0;
+
+                    if ((i + 1) % 12 == 0) j++;
+
+                    if (i < 12)
+                    {
+                        buttons[i] = new Button();
+                        buttons[i].Text = nomes[i];
+
+                        buttons[i].Top = top;
+                        if ((i + 1) % 3 == 0)
+                        {
+                            top += 70;
+                            buttons[i].Left = 590;
+                        }
+                        else
+                            if ((i + 1) % 3 == 1)
+                            buttons[i].Left = 310;
+                        else
+                            buttons[i].Left = 450;
+
+                        buttons[i].Width = 120;
+                        buttons[i].Height = 50;
+                        this.Controls.Add(buttons[i]);
+                    }
+                }
+            };
+            this.Controls.Add(pagAnt);
             this.Controls.Add(pagDep);
 
             if (this.professor != null)

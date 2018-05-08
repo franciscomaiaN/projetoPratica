@@ -52,7 +52,6 @@ namespace ProjetoPratica
 
         private void Login_Load(object sender, EventArgs e)
         {
-            lblFala.Top -= 16;
             timer1.Enabled = true;
             this.modo = 0;
         }
@@ -115,7 +114,7 @@ namespace ProjetoPratica
                     txtNome.Text = "";              
                 }
             }
-            catch (SqlException err)
+            catch (SqlException)
             {
                 this.koroFalar("Usuário já cadastrado!", Color.Red);
             }

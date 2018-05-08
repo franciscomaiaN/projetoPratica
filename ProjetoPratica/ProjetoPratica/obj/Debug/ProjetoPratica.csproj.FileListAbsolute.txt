@@ -86,3 +86,17 @@ Z:\Terceiro Semestre\projetoPratica\ProjetoPratica\ProjetoPratica\obj\Debug\Proj
 Z:\Terceiro Semestre\projetoPratica\ProjetoPratica\ProjetoPratica\obj\Debug\ProjetoPratica.csproj.CoreCompileInputs.cache
 Z:\Terceiro Semestre\projetoPratica\ProjetoPratica\ProjetoPratica\obj\Debug\ProjetoPratica.exe
 Z:\Terceiro Semestre\projetoPratica\ProjetoPratica\ProjetoPratica\obj\Debug\ProjetoPratica.pdb
+C:\Users\Luciano\Desktop\ProjetoPratica\ProjetoPratica\bin\Debug\ProjetoPratica.exe.config
+C:\Users\Luciano\Desktop\ProjetoPratica\ProjetoPratica\bin\Debug\ProjetoPratica.exe
+C:\Users\Luciano\Desktop\ProjetoPratica\ProjetoPratica\bin\Debug\ProjetoPratica.pdb
+C:\Users\Luciano\Desktop\ProjetoPratica\ProjetoPratica\obj\Debug\ProjetoPratica.csprojResolveAssemblyReference.cache
+C:\Users\Luciano\Desktop\ProjetoPratica\ProjetoPratica\obj\Debug\ProjetoPratica.CriarMateria.resources
+C:\Users\Luciano\Desktop\ProjetoPratica\ProjetoPratica\obj\Debug\ProjetoPratica.Form1.resources
+C:\Users\Luciano\Desktop\ProjetoPratica\ProjetoPratica\obj\Debug\ProjetoPratica.FrmPrincipal.resources
+C:\Users\Luciano\Desktop\ProjetoPratica\ProjetoPratica\obj\Debug\ProjetoPratica.Login.resources
+C:\Users\Luciano\Desktop\ProjetoPratica\ProjetoPratica\obj\Debug\ProjetoPratica.Properties.Resources.resources
+C:\Users\Luciano\Desktop\ProjetoPratica\ProjetoPratica\obj\Debug\ProjetoPratica.csproj.GenerateResource.Cache
+C:\Users\Luciano\Desktop\ProjetoPratica\ProjetoPratica\obj\Debug\ProjetoPratica.csproj.CoreCompileInputs.cache
+C:\Users\Luciano\Desktop\ProjetoPratica\ProjetoPratica\obj\Debug\ProjetoPratica.exe
+C:\Users\Luciano\Desktop\ProjetoPratica\ProjetoPratica\obj\Debug\ProjetoPratica.pdb
+Z:\Terceiro Semestre\projetoPratica\ProjetoPratica\ProjetoPratica\obj\Debug\ProjetoPratica.Form1.resources

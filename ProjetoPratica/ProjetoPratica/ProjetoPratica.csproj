@@ -54,9 +54,17 @@
       <DependentUpon>BDPRII17178DataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Aula.cs" />
-    <Compile Include="CriarMateria.cs" />
+    <Compile Include="CriarMateria.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="CriarMateria.Designer.cs">
       <DependentUpon>CriarMateria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Pagina.cs" />
     <Compile Include="Pergunta.cs" />
@@ -78,6 +86,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="CriarMateria.resx">
       <DependentUpon>CriarMateria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmPrincipal.resx">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
@@ -151,6 +162,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\kokoro.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\carakoro.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\carakoro1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\carakoro2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\carakoro0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\balao1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\balao11.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

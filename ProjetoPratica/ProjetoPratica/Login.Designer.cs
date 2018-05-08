@@ -55,7 +55,8 @@
             this.lblFala.BackColor = System.Drawing.Color.White;
             this.lblFala.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFala.ForeColor = System.Drawing.Color.Black;
-            this.lblFala.Location = new System.Drawing.Point(268, 63);
+            this.lblFala.Location = new System.Drawing.Point(258, 41);
+            this.lblFala.MaximumSize = new System.Drawing.Size(340, 70);
             this.lblFala.Name = "lblFala";
             this.lblFala.Size = new System.Drawing.Size(0, 32);
             this.lblFala.TabIndex = 1;

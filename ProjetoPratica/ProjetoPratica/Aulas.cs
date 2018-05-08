@@ -57,11 +57,12 @@ namespace ProjetoPratica
             con.Open();
             adapt = new SqlDataAdapter(cmd);
 
+            ds = new DataSet();
             adapt.Fill(ds);
             con.Close();
             Pagina[] pag = new Pagina[ds.Tables[0].Rows.Count];
 
-            for (int i = 0; i <= ds.Tables[0].Rows.Count; i++)
+            for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
             {
                 dr = ds.Tables[0].Rows[i];
                 pag[i] = new Pagina(dr.ItemArray[0].ToString());
@@ -73,11 +74,12 @@ namespace ProjetoPratica
             con.Open();
             adapt = new SqlDataAdapter(cmd);
 
+            ds = new DataSet();
             adapt.Fill(ds);
             con.Close();
             Pergunta[] perg = new Pergunta[ds.Tables[0].Rows.Count];
 
-            for (int i = 0; i <= ds.Tables[0].Rows.Count; i++)
+            for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
             {
                 dr = ds.Tables[0].Rows[i];
                 perg[i] = new Pergunta(dr.ItemArray[0].ToString(), dr.ItemArray[1].ToString(), dr.ItemArray[2].ToString(), dr.ItemArray[3].ToString(),
@@ -91,13 +93,14 @@ namespace ProjetoPratica
             con.Open();
             adapt = new SqlDataAdapter(cmd);
 
+            ds = new DataSet();
             adapt.Fill(ds);
             con.Close();
             Aula ret;
 
             if (ds.Tables[0].Rows.Count == 1)
             {
-                dr = ds.Tables[0].Rows[1];
+                dr = ds.Tables[0].Rows[0];
                 ret = new Aula(dr.ItemArray[0].ToString(), dr.ItemArray[1].ToString(), dr.ItemArray[2].ToString(), pag, perg);
             }
             else
