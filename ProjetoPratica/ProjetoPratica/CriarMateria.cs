@@ -19,11 +19,14 @@ namespace ProjetoPratica
         private string anterior = "A";
         private string materia;
         private Pergunta[] perguntas = new Pergunta[6];
-        private Pagina[] paginas;
+        private Pagina[] paginas = new Pagina[1];
+        private int numPagina = 1;
+        private string prof;
 
-        public CriarMateria(string mat)
+        public CriarMateria(string mat, string professor)
         {
-            this.materia = mat;
+            materia = mat;
+            prof = professor;
             InitializeComponent();
         }
 
@@ -166,7 +169,46 @@ namespace ProjetoPratica
 
         private void btnFinalizar_Click(object sender, EventArgs e)
         {
+            Aula aula = new Aula(txtMateria.Text, prof, txtDisciplina.Text, paginas, perguntas);
+            Aulas.AddAula(aula);
+        }
 
+        private void btnProxima_Click(object sender, EventArgs e)
+        {
+            if(numPagina == paginas.Length)
+            {
+                Pagina[] aux = paginas;
+
+                numPagina++;
+                paginas = new Pagina[numPagina];
+
+                for (int i = 0; i < numPagina - 1; i++)
+                    paginas[i] = aux[i];
+
+                paginas[numPagina - 2].Texto = txtAula.Text;
+
+                txtAula.Text = "";
+                btnAnterior.Enabled = true;
+            }
+            else
+            {
+                paginas[numPagina - 1].Texto = txtAula.Text;
+                numPagina++;
+
+                txtAula.Text = paginas[numPagina - 1].Texto;
+                btnAnterior.Enabled = true;
+            }
+        }
+
+        private void btnAnterior_Click(object sender, EventArgs e)
+        {
+            paginas[numPagina - 1].Texto = txtAula.Text;
+            numPagina--;
+
+            txtAula.Text = paginas[numPagina - 1].Texto;
+
+            if (numPagina == 1)
+                btnAnterior.Enabled = false;
         }
     }
 }
