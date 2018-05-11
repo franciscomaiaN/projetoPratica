@@ -125,7 +125,7 @@ namespace ProjetoPratica
             lblNomeMat.Text = "Aulas de "+ ((Button)sender).Text; 
             lblNomeMat.Width = 250;
             lblNomeMat.Top = 10;
-            lblNomeMat.Left = 430;
+            lblNomeMat.Left = 425;
             lblNomeMat.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Controls.Add(lblNomeMat);
 
@@ -173,6 +173,9 @@ namespace ProjetoPratica
                         form1.Show();
                         this.Hide();
                     };
+                    buttons[i].FlatStyle = FlatStyle.Flat;
+                    buttons[i].BackColor = Color.RoyalBlue;
+                    buttons[i].ForeColor = Color.Snow;
                     this.Controls.Add(buttons[i]);
                 }
             }
@@ -253,6 +256,9 @@ namespace ProjetoPratica
                             form1.Show();
                             this.Hide();
                         };
+                        buttons[i].FlatStyle = FlatStyle.Flat;
+                        buttons[i].BackColor = Color.RoyalBlue;
+                        buttons[i].ForeColor = Color.Snow;
                         this.Controls.Add(buttons[i]);
                     }
                 }
@@ -309,6 +315,9 @@ namespace ProjetoPratica
                             form1.Show();
                             this.Hide();
                         };
+                        buttons[i].FlatStyle = FlatStyle.Flat;
+                        buttons[i].BackColor = Color.RoyalBlue;
+                        buttons[i].ForeColor = Color.Snow;
                         this.Controls.Add(buttons[i]);
                     }
                 }
@@ -327,7 +336,7 @@ namespace ProjetoPratica
                 novaAula.Top = 390;
                 novaAula.Click += (s, args) =>
                 {
-                    CriarMateria frmNovaMat = new CriarMateria(((Button)sender).Text);
+                    CriarMateria frmNovaMat = new CriarMateria(((Button)sender).Text, this.professor.Usuario);
                     frmNovaMat.Show();
                 };
                 voltar.Click += (s, args) =>
