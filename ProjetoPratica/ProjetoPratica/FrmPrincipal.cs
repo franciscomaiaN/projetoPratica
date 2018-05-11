@@ -10,7 +10,6 @@ using System.Windows.Forms;
 
 namespace ProjetoPratica
 {
-
     public partial class FrmPrincipal : Form
     {
         private Aluno aluno = null;
@@ -52,9 +51,10 @@ namespace ProjetoPratica
             if(this.aluno == null)
             {
                 this.Hide();
+                //Cria um form de login e pega os dados do usuario logado no formulario quando ele fecha
                 Login lg = new Login();
                 lg.FormClosed += (s, args) => {
-                    if (lg.Aluno != null)
+                    if (lg.Aluno != null)//Escreve os dados de aluno
                     {
                         this.Show();
                         this.Aluno = lg.Aluno;
@@ -64,7 +64,7 @@ namespace ProjetoPratica
                         label4.Visible = true;
                     }
                     else
-                        if (lg.Professor != null)
+                        if (lg.Professor != null)//Escreve os nomes de professor
                         {
                             this.Show();
                             this.Professor = lg.Professor;
@@ -79,18 +79,17 @@ namespace ProjetoPratica
             }
         }
 
-        private void alunoBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
-        }
-
         private void btnDeslogar_Click(object sender, EventArgs e)
         {
             this.aluno = null;
+            this.professor = null;
+            groupBox2.Visible = true;
             this.Hide();
+            //Cria um form de login e pega os dados do usuario logado no formulario quando ele fecha
             Login lg = new Login();
             lg.FormClosed += (s, args) => {
 
-                if (lg.Aluno != null)
+                if (lg.Aluno != null) //Escreve os dados de aluno
                 {
                     this.Show();
                     this.Aluno = lg.Aluno;
@@ -101,7 +100,7 @@ namespace ProjetoPratica
                     lblIdade.Visible = true;
                 }
                 else
-                    if (lg.Professor != null)
+                    if (lg.Professor != null) //escreve os dados de professor
                     {
                         this.Show();
                         this.Professor = lg.Professor;
@@ -174,7 +173,7 @@ namespace ProjetoPratica
                         this.Hide();
                     };
                     buttons[i].FlatStyle = FlatStyle.Flat;
-                    buttons[i].BackColor = Color.RoyalBlue;
+                    buttons[i].BackColor = Color.FromArgb(153, 180, 209);
                     buttons[i].ForeColor = Color.Snow;
                     this.Controls.Add(buttons[i]);
                 }
@@ -257,7 +256,7 @@ namespace ProjetoPratica
                             this.Hide();
                         };
                         buttons[i].FlatStyle = FlatStyle.Flat;
-                        buttons[i].BackColor = Color.RoyalBlue;
+                        buttons[i].BackColor = Color.FromArgb(153, 180, 209);
                         buttons[i].ForeColor = Color.Snow;
                         this.Controls.Add(buttons[i]);
                     }
@@ -316,13 +315,19 @@ namespace ProjetoPratica
                             this.Hide();
                         };
                         buttons[i].FlatStyle = FlatStyle.Flat;
-                        buttons[i].BackColor = Color.RoyalBlue;
+                        buttons[i].BackColor = Color.FromArgb(153, 180, 209);
                         buttons[i].ForeColor = Color.Snow;
                         this.Controls.Add(buttons[i]);
                     }
                 }
             };
-            
+            pagAnt.FlatStyle = FlatStyle.Flat;
+            pagAnt.BackColor = Color.RoyalBlue;
+            pagAnt.ForeColor = Color.Snow;
+
+            pagDep.FlatStyle = FlatStyle.Flat;
+            pagDep.BackColor = Color.RoyalBlue;
+            pagDep.ForeColor = Color.Snow;
             this.Controls.Add(pagAnt);
             this.Controls.Add(pagDep);
 
@@ -334,9 +339,12 @@ namespace ProjetoPratica
                 novaAula.Height = 30;
                 novaAula.Left = 610;
                 novaAula.Top = 390;
+                novaAula.FlatStyle = FlatStyle.Flat;
+                novaAula.BackColor = Color.RoyalBlue;
+                novaAula.ForeColor = Color.Snow;
                 novaAula.Click += (s, args) =>
                 {
-                    CriarMateria frmNovaMat = new CriarMateria(((Button)sender).Text, this.professor.Usuario);
+                    CriarMateria frmNovaMat = new CriarMateria(((Button)sender).Text/*, this.professor.Usuario*/);
                     frmNovaMat.Show();
                 };
                 voltar.Click += (s, args) =>
@@ -363,6 +371,9 @@ namespace ProjetoPratica
                     this.Controls.Remove(lblNomeMat);
                     foreach (Button button in buttons) this.Controls.Remove(button);
                 };
+            voltar.FlatStyle = FlatStyle.Flat;
+            voltar.BackColor = Color.RoyalBlue;
+            voltar.ForeColor = Color.Snow;
             this.Controls.Add(voltar);
         }
     }

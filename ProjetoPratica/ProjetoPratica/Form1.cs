@@ -32,8 +32,8 @@ namespace ProjetoPratica
                     new Pergunta("Quem é o jooj5?AAAAAAAAA","Jooj?AAAAAAAAA","Jooj?AAAAAAAAA","Jooj?AAAAAAAAA","Jooj?AAAAAAAAA",'A'),
                 }
             );
-        private int perguntaAtual = -1;
-        private int paginaAtual = -1;
+        private int perguntaAtual;
+        private int paginaAtual;
 
         public Form1(string titulo)
         {
@@ -203,6 +203,9 @@ namespace ProjetoPratica
         {
             groupBox1.Visible = true;
             this.pontos = 0;
+            this.paginaAtual = -1;
+            this.perguntaAtual = -1;
+            btnAnt.Enabled = false;
             
             btnComecar.Enabled = false;
             if (this.aula.Paginas.Length == 1)
@@ -219,9 +222,10 @@ namespace ProjetoPratica
                     button1.Enabled = false;
                 else
                     button1.Enabled = true;
-                button1.PerformClick();
                 return;
             }
+            if (this.aula.Paginas.Length > 1)
+                btnProx.Enabled = true;
             carregarProxPagina();
         }
 
@@ -250,10 +254,13 @@ namespace ProjetoPratica
             lblNomeAula.Text = this.aula.Titulo;
             btnComecar.Enabled = true;
 
-            paginaAtual = -1;
-            perguntaAtual = -1;
             btnAnt.Enabled = false;
-            btnProx.Enabled = true;
+
+            if (this.aula.Paginas.Length > 1)
+                btnProx.Enabled = true;
+            else
+                btnProx.Enabled = false;
+
             groupBox1.Visible = false;
         }
     }
