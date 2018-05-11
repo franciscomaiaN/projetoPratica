@@ -17,11 +17,16 @@ namespace ProjetoPratica
         private string c = "";
         private string d = "";
         private string anterior = "A";
+
         private string materia;
+        private string prof;
+
         private Pergunta[] perguntas = new Pergunta[6];
+
         private Pagina[] paginas = new Pagina[1];
         private int numPagina = 1;
-        private string prof;
+
+        
 
         public CriarMateria(string mat, string professor)
         {
@@ -165,50 +170,66 @@ namespace ProjetoPratica
         private void CriarMateria_Load(object sender, EventArgs e)
         {
             txtDisciplina.Text = materia;
+            cbxAlternativa.SelectedIndex = 0;
         }
 
         private void btnFinalizar_Click(object sender, EventArgs e)
         {
             Aula aula = new Aula(txtMateria.Text, prof, txtDisciplina.Text, paginas, perguntas);
             Aulas.AddAula(aula);
+            paginas[0] = new Pagina("");
         }
 
         private void btnProxima_Click(object sender, EventArgs e)
         {
-            if(numPagina == paginas.Length)
+            try
             {
-                Pagina[] aux = paginas;
+                if (numPagina == paginas.Length)
+                {
+                    Pagina[] aux = paginas;
 
-                numPagina++;
-                paginas = new Pagina[numPagina];
+                    numPagina++;
+                    paginas = new Pagina[numPagina];
 
-                for (int i = 0; i < numPagina - 1; i++)
-                    paginas[i] = aux[i];
+                    for (int i = 0; i < numPagina - 1; i++)
+                        paginas[i] = aux[i];
 
-                paginas[numPagina - 2].Texto = txtAula.Text;
+                    paginas[numPagina - 2] = new Pagina(txtAula.Text);
 
-                txtAula.Text = "";
-                btnAnterior.Enabled = true;
+                    txtAula.Text = "";
+                    btnAnterior.Enabled = true;
+                }
+                else
+                {
+                    paginas[numPagina - 1] = new Pagina(txtAula.Text);
+                    numPagina++;
+
+                    txtAula.Text = paginas[numPagina - 1].Texto;
+                    btnAnterior.Enabled = true;
+                }
             }
-            else
+            catch(Exception err)
             {
-                paginas[numPagina - 1].Texto = txtAula.Text;
-                numPagina++;
-
-                txtAula.Text = paginas[numPagina - 1].Texto;
-                btnAnterior.Enabled = true;
+                MessageBox.Show(err.Message);
             }
         }
 
         private void btnAnterior_Click(object sender, EventArgs e)
         {
-            paginas[numPagina - 1].Texto = txtAula.Text;
-            numPagina--;
+            try
+            { 
+                paginas[numPagina - 1] = new Pagina(txtAula.Text);
+                numPagina--;
 
-            txtAula.Text = paginas[numPagina - 1].Texto;
+                txtAula.Text = paginas[numPagina - 1].Texto;
 
-            if (numPagina == 1)
-                btnAnterior.Enabled = false;
+                if (numPagina == 1)
+                    btnAnterior.Enabled = false;
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message);
+            }
         }
     }
 }
