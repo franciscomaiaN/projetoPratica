@@ -18,7 +18,7 @@ namespace ProjetoPratica
         private string d = "";
         private string anterior = "A";
         private string materia;
-        private Pergunta[] perguntas = new Pergunta[5];
+        private Pergunta[] perguntas = new Pergunta[6];
         private Pagina[] paginas;
 
         public CriarMateria(string mat)
@@ -161,7 +161,12 @@ namespace ProjetoPratica
 
         private void CriarMateria_Load(object sender, EventArgs e)
         {
-            txtDisciplina.Text = this.materia;
+            txtDisciplina.Text = materia;
+        }
+
+        private void btnFinalizar_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

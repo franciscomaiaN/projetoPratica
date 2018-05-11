@@ -100,3 +100,4 @@ C:\Users\Luciano\Desktop\ProjetoPratica\ProjetoPratica\obj\Debug\ProjetoPratica.
 C:\Users\Luciano\Desktop\ProjetoPratica\ProjetoPratica\obj\Debug\ProjetoPratica.exe
 C:\Users\Luciano\Desktop\ProjetoPratica\ProjetoPratica\obj\Debug\ProjetoPratica.pdb
 Z:\Terceiro Semestre\projetoPratica\ProjetoPratica\ProjetoPratica\obj\Debug\ProjetoPratica.Form1.resources
+Z:\PPII\github\projetoPratica\ProjetoPratica\ProjetoPratica\obj\Debug\ProjetoPratica.Form1.resources
