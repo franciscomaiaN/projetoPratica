@@ -145,7 +145,6 @@
             this.lblNome.Size = new System.Drawing.Size(101, 19);
             this.lblNome.TabIndex = 1;
             this.lblNome.Text = "                       ";
-            this.lblNome.Click += new System.EventHandler(this.label1_Click_1);
             // 
             // lblUser
             // 
@@ -157,7 +156,6 @@
             this.lblUser.Size = new System.Drawing.Size(101, 19);
             this.lblUser.TabIndex = 0;
             this.lblUser.Text = "                       ";
-            this.lblUser.Click += new System.EventHandler(this.label1_Click);
             // 
             // groupBox2
             // 

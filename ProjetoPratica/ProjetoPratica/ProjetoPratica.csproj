@@ -48,12 +48,12 @@
     <Compile Include="Aluno.cs" />
     <Compile Include="Alunos.cs" />
     <Compile Include="Aulas.cs" />
+    <Compile Include="Aula.cs" />
     <Compile Include="BDPRII17178DataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>BDPRII17178DataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Aula.cs" />
     <Compile Include="CriarMateria.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -33,5 +33,16 @@ namespace ProjetoPratica.Properties {
                 return ((string)(this["BDPRII17178ConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=regulus.academico.cotuca.unicamp.br;Initial Catalog=BDPRII17178;Persi" +
+            "st Security Info=True;User ID=BDPRII17178;Password=PP217178")]
+        public string BDPRII17178ConnectionString1 {
+            get {
+                return ((string)(this["BDPRII17178ConnectionString1"]));
+            }
+        }
     }
 }

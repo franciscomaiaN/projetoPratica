@@ -68,9 +68,8 @@
             this.lblContent.Location = new System.Drawing.Point(273, 19);
             this.lblContent.MaximumSize = new System.Drawing.Size(520, 480);
             this.lblContent.Name = "lblContent";
-            this.lblContent.Size = new System.Drawing.Size(514, 48);
+            this.lblContent.Size = new System.Drawing.Size(0, 24);
             this.lblContent.TabIndex = 2;
-            this.lblContent.Text = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
             // 
             // btnProx
             // 
@@ -326,11 +325,11 @@
             // 
             this.lblNomeAula.AutoSize = true;
             this.lblNomeAula.BackColor = System.Drawing.Color.White;
-            this.lblNomeAula.Font = new System.Drawing.Font("Arial Black", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNomeAula.Font = new System.Drawing.Font("Arial Black", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNomeAula.Location = new System.Drawing.Point(290, 73);
             this.lblNomeAula.MaximumSize = new System.Drawing.Size(300, 0);
             this.lblNomeAula.Name = "lblNomeAula";
-            this.lblNomeAula.Size = new System.Drawing.Size(147, 52);
+            this.lblNomeAula.Size = new System.Drawing.Size(114, 41);
             this.lblNomeAula.TabIndex = 17;
             this.lblNomeAula.Text = "label1";
             // 

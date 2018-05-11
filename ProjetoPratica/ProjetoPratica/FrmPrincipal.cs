@@ -116,21 +116,6 @@ namespace ProjetoPratica
             lg.Show();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void adicionaBotoes(string[] nomes)
-        {
-            
-        }
-
         private void btnPort_Click(object sender, EventArgs e)
         {
             groupBox2.Visible = false;
@@ -140,7 +125,8 @@ namespace ProjetoPratica
             lblNomeMat.Text = "Aulas de "+ ((Button)sender).Text; 
             lblNomeMat.Width = 250;
             lblNomeMat.Top = 10;
-            lblNomeMat.Left = 440;
+            lblNomeMat.Left = 430;
+            lblNomeMat.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Controls.Add(lblNomeMat);
 
             string[] nomes;
@@ -199,16 +185,7 @@ namespace ProjetoPratica
             voltar.Height = 30;
             voltar.Left = 310;
             voltar.Top = 390;
-            voltar.Click += (s, args) =>
-            {
-                groupBox2.Show();
-                this.pag = 0;
-                this.Controls.Remove(voltar);
-                this.Controls.Remove(lblNomeMat);
-                foreach (Button button in buttons) this.Controls.Remove(button);
-            };
-            this.Controls.Add(voltar);
-
+            
             Button pagAnt = new Button();
             pagAnt.Text = "<<<";
             pagAnt.Width = 70;
@@ -266,6 +243,16 @@ namespace ProjetoPratica
 
                         buttons[i].Width = 120;
                         buttons[i].Height = 50;
+                        buttons[i].Click += (ds, argds) =>
+                        {
+                            Form1 form1 = new Form1(((Button)ds).Text);
+                            form1.FormClosed += (se, ags) =>
+                            {
+                                this.Show();
+                            };
+                            form1.Show();
+                            this.Hide();
+                        };
                         this.Controls.Add(buttons[i]);
                     }
                 }
@@ -312,10 +299,21 @@ namespace ProjetoPratica
 
                         buttons[i].Width = 120;
                         buttons[i].Height = 50;
+                        buttons[i].Click += (sa, argsa) =>
+                        {
+                            Form1 form1 = new Form1(((Button)sa).Text);
+                            form1.FormClosed += (se, ags) =>
+                            {
+                                this.Show();
+                            };
+                            form1.Show();
+                            this.Hide();
+                        };
                         this.Controls.Add(buttons[i]);
                     }
                 }
             };
+            
             this.Controls.Add(pagAnt);
             this.Controls.Add(pagDep);
 
@@ -329,11 +327,34 @@ namespace ProjetoPratica
                 novaAula.Top = 390;
                 novaAula.Click += (s, args) =>
                 {
-                    CriarMateria frmNovaMat = new CriarMateria();
+                    CriarMateria frmNovaMat = new CriarMateria(((Button)sender).Text);
                     frmNovaMat.Show();
+                };
+                voltar.Click += (s, args) =>
+                {
+                    groupBox2.Show();
+                    this.pag = 0;
+                    this.Controls.Remove(pagAnt);
+                    this.Controls.Remove(pagDep);
+                    this.Controls.Remove(voltar);
+                    this.Controls.Remove(novaAula);
+                    this.Controls.Remove(lblNomeMat);
+                    foreach (Button button in buttons) this.Controls.Remove(button);
                 };
                 this.Controls.Add(novaAula);
             }
+            else
+                voltar.Click += (s, args) =>
+                {
+                    groupBox2.Show();
+                    this.pag = 0;
+                    this.Controls.Remove(pagAnt);
+                    this.Controls.Remove(pagDep);
+                    this.Controls.Remove(voltar);
+                    this.Controls.Remove(lblNomeMat);
+                    foreach (Button button in buttons) this.Controls.Remove(button);
+                };
+            this.Controls.Add(voltar);
         }
     }
 }

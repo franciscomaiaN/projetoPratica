@@ -203,13 +203,26 @@ namespace ProjetoPratica
         {
             groupBox1.Visible = true;
             this.pontos = 0;
-            carregarProxPagina();
+            
             btnComecar.Enabled = false;
             if (this.aula.Paginas.Length == 1)
             {
                 btnProx.Enabled = false;
                 button1.Enabled = true;
+                carregarProxPagina();
+                return;
             }
+            if(this.aula.Paginas.Length == 0)
+            {
+                btnProx.Enabled = false;
+                if(this.aula.Perguntas.Length == 0)
+                    button1.Enabled = false;
+                else
+                    button1.Enabled = true;
+                button1.PerformClick();
+                return;
+            }
+            carregarProxPagina();
         }
 
 
