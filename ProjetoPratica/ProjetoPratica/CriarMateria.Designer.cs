@@ -103,6 +103,7 @@
             this.btnProxima.TabIndex = 6;
             this.btnProxima.Text = "Proxima >>";
             this.btnProxima.UseVisualStyleBackColor = true;
+            this.btnProxima.Click += new System.EventHandler(this.btnProxima_Click);
             // 
             // btnAnterior
             // 
@@ -113,6 +114,7 @@
             this.btnAnterior.TabIndex = 7;
             this.btnAnterior.Text = "<< Anterior";
             this.btnAnterior.UseVisualStyleBackColor = true;
+            this.btnAnterior.Click += new System.EventHandler(this.btnAnterior_Click);
             // 
             // btnFinalizar
             // 
