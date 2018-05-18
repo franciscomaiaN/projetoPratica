@@ -5,7 +5,6 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ProjetoPratica
@@ -16,7 +15,7 @@ namespace ProjetoPratica
         private string b = "";
         private string c = "";
         private string d = "";
-        private string anterior = "A";
+        private string anterior ="A";
 
         private string materia;
         private string prof;
@@ -33,6 +32,7 @@ namespace ProjetoPratica
             materia = mat;
             prof = professor;
             InitializeComponent();
+            cbxAlternativa.SelectedIndex = 0;
         }
 
         private void LimparPerguntas()
@@ -76,7 +76,7 @@ namespace ProjetoPratica
             if (anterior == "D")
                 d = txtAlternativa.Text;
 
-            anterior = cbxAlternativa.SelectedText;
+            anterior = cbxAlternativa.SelectedItem.ToString();
 
             if (anterior == "A")
                 txtAlternativa.Text = a;
@@ -170,7 +170,6 @@ namespace ProjetoPratica
         private void CriarMateria_Load(object sender, EventArgs e)
         {
             txtDisciplina.Text = materia;
-            cbxAlternativa.SelectedIndex = 0;
         }
 
         private void btnFinalizar_Click(object sender, EventArgs e)

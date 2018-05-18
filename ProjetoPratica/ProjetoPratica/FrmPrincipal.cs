@@ -344,7 +344,7 @@ namespace ProjetoPratica
                 novaAula.ForeColor = Color.Snow;
                 novaAula.Click += (s, args) =>
                 {
-                    CriarMateria frmNovaMat = new CriarMateria(((Button)sender).Text/*, this.professor.Usuario*/);
+                    CriarMateria frmNovaMat = new CriarMateria(((Button)sender).Text, this.professor.Usuario);
                     frmNovaMat.Show();
                 };
                 voltar.Click += (s, args) =>
